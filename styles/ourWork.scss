@@ -1,0 +1,385 @@
+@import "./style.scss";
+
+#ourWork {
+  height: 500vh;
+
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 150px 180px 0px 220px;
+  .horizontalPics {
+    margin-bottom: 150px;
+    width: 100%;
+    height: 80vh;
+    display: block;
+    overflow: hidden;
+    background-color: #0c0910;
+    position: relative;
+  }
+  .picsWrapper {
+    position: absolute;
+
+    transform: rotate(25deg) translate(-30%, -22%) !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .row {
+      display: flex;
+      .pic {
+        height: 0;
+        padding-bottom: 18.9%;
+        min-width: 33%;
+        margin: 2%;
+        overflow: hidden;
+        box-sizing: border-box;
+        background-size: cover;
+        background-position: 50%;
+      }
+    }
+  }
+}
+.firstSection {
+  // The picture of the client and the work done displayed in a column
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  .item {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .firstItem {
+    background-image: url("../public/Mesh14.jpg") !important ;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    .projectMock {
+      position: relative;
+      width: 90%;
+      opacity: 0;
+      .mock {
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center top;
+        border-radius: 15px 15px 0 0;
+      }
+      .projectPic {
+        width: 100%;
+      }
+    }
+    .videoWrapper {
+      overflow: hidden;
+      width: 100%;
+
+      display: flex;
+      justify-content: center;
+      border-radius: 0 0 15px 15px;
+
+      position: relative;
+      top: -0.7rem;
+    }
+    .mock {
+      width: inherit;
+      position: relative;
+      z-index: 2;
+
+      top: 5px;
+      min-width: 100%;
+    }
+    video {
+      width: 100%;
+      display: flex;
+      object-fit: cover;
+      object-position: bottom center;
+      position: relative;
+      bottom: -6px;
+    }
+  }
+
+  .secondItem {
+    background-image: url("../public/Mesh48.jpg");
+    .projectMock {
+      width: 80%;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  .thirdItem {
+    background-color: #d3daea;
+    .projectMock {
+      width: 100%;
+      min-height: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      .mock {
+        width: 100%;
+      }
+      .goodtripz {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        min-height: 100%;
+      }
+    }
+  }
+  .fourthItem {
+    background-image: url("../public/Mesh32.jpg") !important ;
+    overflow: hidden;
+    align-items: flex-end;
+    .projectMock {
+      display: flex;
+      flex-direction: column;
+      width: 70%;
+    }
+    .diginationWrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      bottom: -1rem;
+    }
+    .mock {
+      width: 100%;
+    }
+    .diginationOG {
+      position: relative;
+      aspect-ratio: 16/15;
+      width: 100%;
+      object-fit: cover;
+      object-position: left top;
+    }
+  }
+  .bottomText {
+    display: flex;
+    align-items: center;
+    h1 {
+      margin-right: 20px;
+    }
+    h2 {
+      font-size: 0.9em;
+      // height: 30px;
+      // line-height: 70px;
+      text-align: center;
+      color: gray;
+    }
+  }
+}
+.ourWork {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .title {
+    color: white;
+    font-family: "3rdpartyBold";
+
+    font-size: 8em;
+  }
+}
+.showCaseWrapper {
+  width: 80%;
+
+  margin-bottom: 20%;
+  aspect-ratio: 231/148;
+}
+.thirdProject {
+  aspect-ratio: 231/100;
+}
+.showCaseWrapper:nth-child(even) {
+  align-self: flex-end;
+}
+.fourthItem {
+  .projectMock {
+    width: 70%;
+  }
+  .digination_1 {
+    width: 100%;
+  }
+  .mock {
+    width: 100%;
+  }
+}
+.showCase {
+  pointer-events: none;
+  color: white;
+  font-family: "3rdparty";
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+
+  box-sizing: border-box;
+  position: relative;
+}
+.leftText {
+  height: 100%;
+  min-width: 5%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #ced3dc;
+  .lineDesElement {
+    border-radius: 10px;
+    height: 10%;
+    width: 2px;
+    background-color: #a6a9b0;
+    margin: 0 auto;
+    position: relative;
+    top: 2rem;
+  }
+  p {
+    font-family: "3rdparty";
+    font-size: min(1em, 1.5vw);
+
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+
+    display: inline;
+    bottom: 30%;
+
+    margin: 0;
+
+    color: inherit;
+    display: flex;
+    align-items: center;
+
+    span {
+      width: 1.2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .leftText {
+  }
+  .showCaseWrapper {
+    aspect-ratio: 231/173;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .leftText {
+    justify-content: flex-start;
+    padding-top: 7rem;
+  }
+  #ourWork {
+    padding: 0 50px;
+  }
+  .showCaseWrapper {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .leftText {
+    // justify-content: flex-start;
+    padding-top: 4rem;
+  }
+  .showCase {
+    .leftText {
+      p {
+      }
+    }
+    .bottomText {
+      h1 {
+        font-size: 3vw;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  #ourWork {
+    padding: 0 0;
+    .horizontalPics {
+      height: 35vh !important ;
+    }
+  }
+  .showCaseWrapper {
+    width: 95%;
+
+    aspect-ratio: 231/193;
+  }
+  .showCase {
+    .leftText {
+      p {
+      }
+    }
+  }
+}
+@media only screen and (max-width: 699px) {
+  .firstSection .secondItem {
+    // align-items: flex-end;
+  }
+  .firstSection .secondItem .internship {
+    aspect-ratio: 16/21;
+  }
+  .firstSection .secondItem .projectMock {
+    width: 90%;
+  }
+  .firstSection .firstItem .projectMock {
+    width: 100%;
+    right: -2rem;
+    justify-content: flex-end;
+  }
+  .firstSection .thirdItem .projectMock {
+    height: 100%;
+    .goodtripz {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left;
+    }
+  }
+  .firstSection .fourthItem .projectMock {
+    width: 90%;
+  }
+  .showCaseWrapper {
+    width: 100%;
+  }
+  .showCase {
+    .leftText {
+      p {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 500px) {
+  .showCaseWrapper {
+    aspect-ratio: 231/220;
+  }
+  .ourWork .title {
+    font-size: 4em;
+    margin: 20px;
+  }
+  .leftText {
+  }
+  .scrollBarContainer,
+  .sideLink1,
+  .sideLink2 {
+    display: none;
+  }
+  .showCase {
+    .firstSection {
+      width: 97%;
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .showCaseWrapper {
+    aspect-ratio: 231/280;
+  }
+}

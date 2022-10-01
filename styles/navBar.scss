@@ -1,0 +1,122 @@
+#navBar {
+  pointer-events: auto;
+  font-family: "3rdparty", sans-serif;
+  padding: 0 135px;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  padding: 12%;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 90px;
+  z-index: 200;
+  .third {
+    width: calc(100% / 3);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    &:nth-of-type(1) {
+      justify-content: flex-start;
+    }
+    &:nth-of-type(2) {
+      justify-content: center;
+    }
+    &:nth-of-type(3) {
+      justify-content: flex-end;
+    }
+  }
+
+  #logo {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: white;
+    margin: 0;
+  }
+  .third {
+    a {
+      text-decoration: none;
+    }
+  }
+  padding-top: 31px;
+  height: 90px;
+  width: 100%;
+  display: flex;
+  background-color: #121217;
+}
+
+.btn {
+  margin-top: 0;
+  background-color: white;
+  box-shadow: 0 0.4rem 6rem rgba(0, 0, 0, 0.08);
+  height: 3rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //   padding: 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  color: black;
+  cursor: pointer;
+  font-weight: 400;
+  // line-height: 45px;
+  white-space: nowrap;
+  // letter-spacing: 0;
+  //   max-width: 80px;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  //   width: 100%;
+  box-sizing: inherit;
+  // transition-property: all;
+  // transition-duration: 0.6s;
+  // transition-timing-function: ease;
+
+  img {
+    width: 1rem;
+    margin-right: 5px;
+  }
+}
+.btn-right {
+  text-align: right;
+  //   max-width: 160px !important;
+}
+
+@media only screen and (max-width: 768px) {
+  #navBar {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media only screen and (max-width: 699px) {
+  #navBar {
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .third {
+    .btn {
+      width: 97%;
+      font-size: 0.8rem;
+    }
+  }
+}
+@media only screen and (max-width: 450px) {
+  #navBar {
+    // font-size: 0.8em !important;
+    #logo {
+      position: absolute;
+      top: 10px;
+      left: 30px;
+    }
+
+    .third {
+      .btn {
+        width: 97%;
+        font-size: max(0.8rem, 2.5vw);
+      }
+    }
+  }
+}
