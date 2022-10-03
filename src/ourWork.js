@@ -8,12 +8,6 @@ export default class OurWork extends React.Component {
   constructor(props) {
     super(props);
     // gsap.registerPlugin(ScrollTrigger);
-    this.images = [
-      ["", "", "image0", "image1"],
-      ["image2", "image3", "image4", "image5"],
-      ["image6", "image7", "image8", "image9"],
-      ["image10", "image11", "", ""],
-    ];
   }
   componentDidMount() {
     var showCaseItems = document.querySelectorAll(".showCaseWrapper");
@@ -74,7 +68,9 @@ export default class OurWork extends React.Component {
           </div>
         </div> */}
         <div className="ourWork">
-          <h1 className="title">RECENT WORK</h1>
+          <h1 className="title">
+            <span>Recent</span> Projects
+          </h1>
           <div className="showCaseWrapper">
             <div className="showCase">
               <div className="leftText">

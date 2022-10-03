@@ -29,7 +29,7 @@ function useLocoscroll(scrollRef, multiplier) {
           getDirection: true,
           reloadOnContextChange: true,
           smartphone: {
-            smooth: false,
+            // smooth: true,
           },
           tablet: {
             smooth: true,

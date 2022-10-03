@@ -13,7 +13,7 @@ function Home() {
   }, [isLocoLoaded]);
 
   return (
-    <div ref={scrollRef} className="homeWrapper">
+    <div data-scroll-container ref={scrollRef} className="homeWrapper">
       <HomePage isHomeMounted={isHomeMounted} />
     </div>
   );

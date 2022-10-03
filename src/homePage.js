@@ -71,18 +71,11 @@ export default class HomePage extends React.Component {
             scrollTrigger: {
               trigger: "#firstPage",
               start: "top+=10px top",
-              end: "top+=20px top",
+              // end: "top+=20px top",
               toggleActions: "restart none none none ",
             },
           })
-          .to(
-            cards[i],
-            {
-              boxShadow: "none",
-              duration: 0.2,
-            },
-            "0"
-          )
+
           .to(
             ".firstThreeCards",
             {
@@ -116,12 +109,6 @@ export default class HomePage extends React.Component {
                 id: "cards",
                 trigger: "#firstPage",
                 start: "top+=50px top",
-                onEnter: () => {
-                  // beforeScrollTl.play();
-                },
-                onLeaveBack: () => {
-                  // beforeScrollTl.reverse();
-                },
                 endTrigger: project,
                 end: "center center+=20%",
                 // snap: 0.2,
@@ -131,12 +118,29 @@ export default class HomePage extends React.Component {
             .set(cards[i], {
               pointerEvents: "none",
             })
-
+            .to(
+              q(".cardTextWrapper"),
+              {
+                autoAlpha: 0,
+                // display: "none",
+                duration: 0.2,
+              },
+              "<"
+            )
             .to(
               cards[i],
               {
-                duration: 10 - i * 0.1,
+                boxShadow: "none",
+                duration: 0.2,
+              },
+              "<"
+            )
+            .to(
+              cards[i],
+              {
+                duration: 10 - i * 0.2,
                 ease: i === 0 ? "linear" : "slow(0.7, 0.7, false)",
+                // rotation: 0,
                 motionPath: {
                   path: [targetCoordinates],
                   align: "self",
@@ -156,23 +160,23 @@ export default class HomePage extends React.Component {
               },
               "<"
               // "3"
-            )
-            .to(
-              q(".cardTextWrapper"),
-              {
-                autoAlpha: 0,
-                // display: "none",
-                duration: 0.2,
-              },
-              "0"
-            )
-            .to(
-              q(".imgWrapper"),
-              {
-                borderRadius: "1.2rem",
-              },
-              "<"
             );
+          // .to(
+          //   q(".cardTextWrapper"),
+          //   {
+          //     autoAlpha: 0,
+          //     // display: "none",
+          //     duration: 0.2,
+          //   },
+          //   "0"
+          // )
+          // .to(
+          //   q(".imgWrapper"),
+          //   {
+          //     borderRadius: "1.2rem",
+          //   },
+          //   "<"
+          // );
           return moveCardsTl;
         }
         moveCardsToProjects();
@@ -195,7 +199,7 @@ export default class HomePage extends React.Component {
       <>
         <section id="firstPage">
           <div id="content">
-            <div>
+            <div className="contentText">
               <div className="titleWrapper">
                 <div className="titleLineWrapper">
                   <p className="titleLine">

@@ -189,7 +189,7 @@ export default function loadBackground() {
   function animateDots() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     moveDots();
-    connectDots();
+    if (window.innerWidth > 699) connectDots();
     drawDots();
     requestAnimationFrame(animateDots);
   }
