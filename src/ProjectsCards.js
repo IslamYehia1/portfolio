@@ -101,13 +101,13 @@ function ProjectsCards({ isHomeMounted }) {
       />
       <Card
         title={"Goodtripz"}
-        description={"Marketing site"}
+        description={"Travel shopping web app"}
         className={"firstThreeCards"}
         src={goodtripz}
       />
       <Card
         title={"Digination Internship"}
-        description={"Marketing site"}
+        description={"Marketing Site"}
         src={internship}
       />
     </>

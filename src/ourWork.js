@@ -4,6 +4,13 @@ import path from "path";
 import gsap from "gsap";
 // import { ScrollTrigger } from "gsap/ScrollTrigger";
 // import DigiVideo from "../src/digination.mp4";
+import DiginationDemoMock from "../public/Digination_Demo_Mock/lightMock.png";
+import DiginationMock from "../public/Digination_Demo_Mock/lightMock.png";
+import InternshipMock from "../public/Internship_Mock/lightMock.png";
+import Goodtripz from "../public/goodtripz_transparent.png";
+import Internship from "../public/internship.png";
+import Digination from "../public/digination_1.png";
+import Image from "next/image";
 export default class OurWork extends React.Component {
   constructor(props) {
     super(props);
@@ -71,18 +78,23 @@ export default class OurWork extends React.Component {
           <h1 className="title">
             <span>Recent</span> Projects
           </h1>
-          <div className="showCaseWrapper">
+
+          <a
+            className="showCaseWrapper"
+            href="https://demo.diginationmea.com/"
+            target="_blank"
+          >
             <div className="showCase">
               <div className="leftText">
                 <p>
-                  <span>UX/UI DESIGN & DEVELOPMENT</span>
+                  <span>ReactJS - GSAP</span>
                 </p>{" "}
                 <div className="lineDesElement" />
               </div>
               <div className="firstSection">
                 <div className="item firstItem">
                   <div className="projectMock">
-                    <img className="mock" src={"./lightMock.png"} />
+                    <Image className="mock" src={DiginationDemoMock} />
                     <div className="videoWrapper">
                       <video autoPlay muted loop>
                         <source src={"./Digination.mp4"} type="video/mp4" />
@@ -93,39 +105,47 @@ export default class OurWork extends React.Component {
                 </div>
                 <div className="bottomText">
                   <h1>Digination</h1>
-                  <h2>An IT company based in KSA</h2>
+                  <h2>UX/UI DESIGN & DEVELOPMENT</h2>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
 
-          <div className="showCaseWrapper leftClient">
+          <a
+            className="showCaseWrapper leftClient"
+            href="https://diginationmea.com/"
+            target="_blank"
+          >
             <div className="showCase">
               <div className="leftText">
                 <p>
-                  <span>BRANDING & UX/UI DESIGN</span>
+                  <span>Wordpress</span>
                 </p>{" "}
                 <div className="lineDesElement" />
               </div>
               <div className="firstSection">
                 <div className="item secondItem">
                   <div className="projectMock">
-                    <img className="mock" src={"./lightMock.png"} />
-                    <img className="digination_1" src="./digination_1.png" />
+                    <Image className="mock" src={DiginationMock} />
+                    <Image className="digination_1" src={Digination} />
                   </div>
                 </div>
                 <div className="bottomText">
-                  <h1>CLIENT</h1>
-                  <h2>A HIGH END TECH BRAND FOR SELLING</h2>
+                  <h1>Digination</h1>
+                  <h2>Development & Maintenance</h2>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="showCaseWrapper thirdProject">
+          </a>
+          <a
+            className="showCaseWrapper thirdProject"
+            href="https://goodtripz.vercel.app/#"
+            target="_blank"
+          >
             <div className="showCase">
               <div className="leftText">
                 <p>
-                  <span>BRANDING & UX/UI DESIGN</span>
+                  <span>FIGMA - NextJS - Linux - NodeJS</span>
                 </p>{" "}
                 <div className="lineDesElement" />
               </div>
@@ -133,25 +153,26 @@ export default class OurWork extends React.Component {
                 <div className="item thirdItem">
                   <div className="projectMock">
                     {/* <img className="mock" src={"./lightMock.png"} /> */}
-                    <img
-                      className="goodtripz"
-                      src="./goodtripz_transparent.png"
-                    />
+                    <Image className="goodtripz" src={Goodtripz} />
                   </div>
                   {/* <img src=" alt=""/> */}
                 </div>
                 <div className="bottomText">
-                  <h1>CLIENT</h1>
-                  <h2>A HIGH END TECH BRAND FOR SELLING</h2>
+                  <h1>Goodtripz</h1>
+                  <h2>Design & Development</h2>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="showCaseWrapper ">
+          </a>
+          <a
+            className="showCaseWrapper"
+            href="https://internship.diginationmea.net/"
+            target="_blank"
+          >
             <div className="showCase">
               <div className="leftText">
                 <p>
-                  <span>BRANDING & UX/UI DESIGN</span>
+                  <span>Wordpress</span>
                 </p>{" "}
                 <div className="lineDesElement" />
               </div>
@@ -159,20 +180,19 @@ export default class OurWork extends React.Component {
                 <div className="item fourthItem">
                   <div className="projectMock">
                     <div className="diginationWrapper">
-                      <img className="mock" src={"./lightMock.png"} />
-
-                      <img className="diginationOG" src="./internship.png" />
+                      <Image className="mock" src={InternshipMock} />
+                      <Image className="diginationOG" src={Internship} />
                     </div>
                   </div>
                   {/* <img src=" alt=""/> */}
                 </div>
                 <div className="bottomText">
-                  <h1>CLIENT</h1>
-                  <h2>A HIGH END TECH BRAND FOR SELLING</h2>
+                  <h1>Digination Internship</h1>
+                  <h2>UI/UX Desgin & development</h2>
                 </div>
               </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     );

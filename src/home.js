@@ -1,7 +1,6 @@
 import React from "react";
 import HomePage from "./homePage.js";
 import OurWork from "./ourWork";
-import Nav from "./nav.js";
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -14,7 +13,6 @@ export default class Home extends React.Component {
   render() {
     return (
       <>
-        <Nav />
         <HomePage isHomeMounted={this.props.isHomeMounted} />
         <OurWork />
       </>

@@ -217,8 +217,8 @@ export default class HomePage extends React.Component {
               <div className="aboutMe">
                 <p>
                   Hi, I'm Islam Mansour, I use NextJS, ReactJS, NodeJS, Python,
-                  Wordpress or whatever the appropriate tool is to build a web
-                  app.
+                  , SQL, Wordpress or whatever the appropriate tool is to build
+                  a web app.
                 </p>
               </div>
             </div>
