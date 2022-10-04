@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
         />
         <meta property="og:title" content="Islam Mansour's portfolio" />
         <meta property="og:type" content="website" />
-        <meta property="og:image" content={PortfolioImg} />
+        <meta property="og:image" content={"/portfolio.png"} />
         <meta property="og:url" content="https://islammansour.site" />
 
         {/* <meta name="viewport" content="width=device-width" /> */}
