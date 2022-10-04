@@ -105,7 +105,7 @@ export default class OurWork extends React.Component {
                 </div>
                 <div className="bottomText">
                   <h1>Digination</h1>
-                  <h2>UX/UI DESIGN & DEVELOPMENT</h2>
+                  <h2>UX/UI Design & Development</h2>
                 </div>
               </div>
             </div>
