@@ -26,8 +26,8 @@ function ProjectsCards({ isHomeMounted }) {
         });
       }
       const cardsTl = gsap.timeline({
-        delay: 4,
-        repeatDelay: 4,
+        // delay: 3,
+        // repeatDelay: 4,
         repeat: -1,
         scrollTrigger: {
           trigger: "#firstPage",
@@ -39,7 +39,9 @@ function ProjectsCards({ isHomeMounted }) {
 
       for (let i = 0; i < cards.length; i++) {
         const tl = gsap
-          .timeline()
+          .timeline({
+            delay: 2,
+          })
           .to(cards[i], {
             autoAlpha: 0,
             x: "random([-50, 50 , 0])",
@@ -83,6 +85,15 @@ function ProjectsCards({ isHomeMounted }) {
           );
         cardsTl.add(tl, i * 3);
       }
+      cardsTl.add(
+        gsap.to(".coloredLine", {
+          width: "100%",
+          duration: cardsTl.duration() + 2,
+          ease: "linear",
+        }),
+        "0"
+      );
+      console.log(cardsTl.duration());
     }
   }, [isHomeMounted]);
   return (
@@ -92,24 +103,34 @@ function ProjectsCards({ isHomeMounted }) {
         description={"Marketing site"}
         className={"firstThreeCards"}
         src={digination}
+        href={"https://demo.diginationmea.com/"}
       />
       <Card
         title={"Digination"}
         description={"Marketing site"}
         className={"firstThreeCards"}
         src={digination_1}
+        href={"https://diginationmea.com/"}
       />
       <Card
         title={"Goodtripz"}
         description={"Travel shopping web app"}
         className={"firstThreeCards"}
         src={goodtripz}
+        href={"https://goodtripz.vercel.app/"}
       />
       <Card
         title={"Digination Internship"}
         description={"Marketing Site"}
         src={internship}
+        href={"https://internship.diginationmea.net/"}
       />
+      <div className="cardsLoaderWrapper">
+        <div className="cardsLoader">
+          <span className="emptyLine"></span>
+          <span className="coloredLine"></span>
+        </div>
+      </div>
     </>
   );
 }

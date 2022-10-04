@@ -94,7 +94,11 @@ export default class OurWork extends React.Component {
               <div className="firstSection">
                 <div className="item firstItem">
                   <div className="projectMock">
-                    <Image className="mock" src={DiginationDemoMock} />
+                    <Image
+                      className="mock"
+                      src={DiginationDemoMock}
+                      alt={"Digination Demo browser mock"}
+                    />
                     <div className="videoWrapper">
                       <video autoPlay muted loop>
                         <source src={"./Digination.mp4"} type="video/mp4" />
@@ -126,8 +130,16 @@ export default class OurWork extends React.Component {
               <div className="firstSection">
                 <div className="item secondItem">
                   <div className="projectMock">
-                    <Image className="mock" src={DiginationMock} />
-                    <Image className="digination_1" src={Digination} />
+                    <Image
+                      alt={"Digination browser mock"}
+                      className="mock"
+                      src={DiginationMock}
+                    />
+                    <Image
+                      alt="Digination site screenshot"
+                      className="digination_1"
+                      src={Digination}
+                    />
                   </div>
                 </div>
                 <div className="bottomText">
@@ -139,7 +151,7 @@ export default class OurWork extends React.Component {
           </a>
           <a
             className="showCaseWrapper thirdProject"
-            href="https://goodtripz.vercel.app/#"
+            href="https://goodtripz.vercel.app/"
             target="_blank"
           >
             <div className="showCase">
@@ -153,7 +165,12 @@ export default class OurWork extends React.Component {
                 <div className="item thirdItem">
                   <div className="projectMock">
                     {/* <img className="mock" src={"./lightMock.png"} /> */}
-                    <Image className="goodtripz" src={Goodtripz} />
+
+                    <Image
+                      alt="Goodtripz site screenshot"
+                      className="goodtripz"
+                      src={Goodtripz}
+                    />
                   </div>
                   {/* <img src=" alt=""/> */}
                 </div>
@@ -180,8 +197,16 @@ export default class OurWork extends React.Component {
                 <div className="item fourthItem">
                   <div className="projectMock">
                     <div className="diginationWrapper">
-                      <Image className="mock" src={InternshipMock} />
-                      <Image className="diginationOG" src={Internship} />
+                      <Image
+                        alt="Internship site browser mock"
+                        className="mock"
+                        src={InternshipMock}
+                      />
+                      <Image
+                        alt="Internship site screenshot"
+                        className="diginationOG"
+                        src={Internship}
+                      />
                     </div>
                   </div>
                   {/* <img src=" alt=""/> */}

@@ -9,6 +9,9 @@ import gsap from "gsap";
 
 import useLocoscroll from "./useLocoscroll";
 import ContactMe from "./contactMe.js";
+import GithubLogo from "../public/github-logo.svg";
+import LinkedInLogo from "../public/linkedin.svg";
+import ContactIcon from "../public/contact.svg";
 export default class Nav extends React.Component {
   constructor(props) {
     super(props);
@@ -23,14 +26,32 @@ export default class Nav extends React.Component {
   componentDidUpdate(prevProps, prevState) {
     if (!this.props.isHomeMounted) return;
     if (prevProps !== this.props && this.props.isHomeMounted) {
+      gsap.set(".overlay", {
+        scaleY: 0,
+        transformOrigin: "top center",
+      });
       this.contactOverlayTl = gsap
         .timeline({ paused: true })
-        .to(".overlay", {
+        .set(".overlay", {
           autoAlpha: 1,
         })
-        .to(".contactMe", {
-          autoAlpha: 1,
-        });
+        .to(".overlay", {
+          scaleY: 1,
+          duration: 0.3,
+          ease: "power3.easeOut",
+        })
+        .fromTo(
+          ".contactMe",
+          {
+            autoAlpha: 0,
+            y: -10,
+          },
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.4,
+          }
+        );
     }
     if (prevState !== this.state && this.state.isContactActive) {
       this.contactOverlayTl.restart();
@@ -53,7 +74,7 @@ export default class Nav extends React.Component {
               target="_blank"
               href="https://www.linkedin.com/in/islam-mansour-7b7b58248/"
             >
-              <img src={"/github-logo.png"} />
+              <LinkedInLogo />
               <span>LinkedIn</span>
             </a>
           </div>
@@ -63,7 +84,7 @@ export default class Nav extends React.Component {
               target="_blank"
               href="https://github.com/IslamYehia1"
             >
-              <img src="/linkedin.png" />
+              <GithubLogo />
               <span>Github</span>
             </a>
           </div>
@@ -75,7 +96,7 @@ export default class Nav extends React.Component {
               className="btn btn-right"
             >
               <a className="btn">
-                <img src="/contact.png" />
+                <ContactIcon />
                 <span>Contact</span>
               </a>
             </button>

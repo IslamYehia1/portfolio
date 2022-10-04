@@ -3,7 +3,7 @@
 #ourWork {
   // height: 500vh;
 
-  background-color: transparent;
+  background-color: #121217;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -56,6 +56,22 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+  }
+  .bottomText {
+    display: flex;
+    align-items: center;
+    h1 {
+      margin-right: 20px;
+      font-size: 1.5rem;
+    }
+    h2 {
+      font-size: 0.9em;
+      // height: 30px;
+      // line-height: 70px;
+      text-align: center;
+      color: gray;
+      margin: 4px 0 0 0;
+    }
   }
   .firstItem {
     background-image: url("../public/Mesh14.jpg") !important ;
@@ -143,15 +159,18 @@
       display: flex;
       flex-direction: column;
       width: 70%;
+      aspect-ratio: 192/195;
     }
     .diginationWrapper {
       position: relative;
       display: flex;
       flex-direction: column;
-      bottom: -1rem;
+      height: 100%;
+      bottom: -2rem;
     }
     .mock {
       width: 100%;
+      object-fit: cover;
     }
     .diginationOG {
       position: relative;
@@ -159,20 +178,6 @@
       width: 100%;
       object-fit: cover;
       object-position: left top;
-    }
-  }
-  .bottomText {
-    display: flex;
-    align-items: center;
-    h1 {
-      margin-right: 20px;
-    }
-    h2 {
-      font-size: 0.9em;
-      // height: 30px;
-      // line-height: 70px;
-      text-align: center;
-      color: gray;
     }
   }
 }

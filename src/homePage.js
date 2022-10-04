@@ -16,6 +16,9 @@ export default class HomePage extends React.Component {
   }
   componentDidMount() {
     loadBackground();
+    gsap.set("#ourWork", {
+      backgroundColor: "transparent",
+    });
   }
   componentDidUpdate(prevProps, prevState) {
     if (this.props.isHomeMounted && this.props !== prevProps) {
