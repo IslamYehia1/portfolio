@@ -1,6 +1,6 @@
 #navBar {
   pointer-events: auto;
-  font-family: "3rdparty", sans-serif;
+  font-family: "GraphikMedium", sans-serif;
   padding: 0 135px;
   box-sizing: border-box;
   position: absolute;
@@ -122,24 +122,28 @@
   justify-content: center;
   align-items: center;
   //   padding: 2rem;
+  font-family: inherit;
   border-radius: 0.5rem;
   border: none;
-  color: black;
+  color: #35353c;
   cursor: pointer;
-  font-weight: 400;
+  font-size: inherit;
+  // font-weight: 400;
   // line-height: 45px;
   white-space: nowrap;
   // letter-spacing: 0;
   //   max-width: 80px;
   position: relative;
   text-decoration: none;
-  text-transform: uppercase;
+  // text-transform: uppercase;
   //   width: 100%;
   box-sizing: inherit;
   // transition-property: all;
   // transition-duration: 0.6s;
   // transition-timing-function: ease;
-
+  span {
+    margin-top: 2px;
+  }
   svg {
     width: 1rem;
     margin-right: 5px;

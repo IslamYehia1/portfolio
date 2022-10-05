@@ -103,19 +103,6 @@
     font-weight: 100;
     margin: 0;
   }
-
-  .seeMore {
-    font-family: "3rdparty";
-    font-size: 1em;
-    padding: 20px 40px;
-    border-radius: 100rem;
-    background-color: white;
-    color: black;
-    border: 1px white;
-    float: right;
-    margin-top: 6%;
-    text-decoration: none;
-  }
 }
 .cardsStack {
   position: relative;
@@ -153,7 +140,7 @@
   // position: absolute;
   grid-column: 1 / 1;
   grid-row: 1 / 1;
-  font-family: "3rdparty";
+  font-family: "GraphikMedium";
   will-change: transform;
   border-radius: 1.2rem;
   overflow: hidden;
@@ -188,13 +175,14 @@
   padding-top: 1rem;
   padding-left: 2rem;
   padding-bottom: 1rem;
-  color: black;
+  color: #35353c;
   background-color: white;
 
   p {
-    color: black;
+    color: inherit;
   }
   h1 {
+    color: inherit;
     font-size: 1rem;
     margin: 0;
   }

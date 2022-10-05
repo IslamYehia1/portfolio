@@ -121,11 +121,20 @@ export default class HomePage extends React.Component {
             .set(cards[i], {
               pointerEvents: "none",
             })
+
             .to(
               q(".cardTextWrapper"),
               {
                 autoAlpha: 0,
                 // display: "none",
+                duration: 0.2,
+              },
+              "<"
+            )
+            .to(
+              ".cardsLoaderWrapper",
+              {
+                autoAlpha: 0,
                 duration: 0.2,
               },
               "<"
