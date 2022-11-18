@@ -258,7 +258,7 @@
   p {
     font-family: "GraphikMedium";
     font-size: min(1em, 1vw);
-
+    white-space: nowrap;
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
 
@@ -384,6 +384,9 @@
       height: 100%;
       object-fit: cover;
       object-position: left;
+    }
+    & > span {
+      min-height: 100% !important;
     }
   }
   .firstSection .fourthItem .projectMock {
