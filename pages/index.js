@@ -7,7 +7,15 @@ function Home() {
   const scrollRef = useRef(null);
   const [isLocoLoaded, locoScroll] = useLocoscroll(scrollRef, 1);
   const [isHomeMounted, setIsHomeMounted] = useState(false);
-
+  // useEffect(() => {
+  //   (async () => {
+  //     const rawRes = await fetch(
+  //       "https://ipgeolocation.abstractapi.com/v1/?api_key=10a221e2834d4fbcba613cfcb0f4a28b"
+  //     );
+  //     const jsonRes = await rawRes.json();
+  //     console.log(jsonRes);
+  //   })();
+  // }, []);
   useEffect(() => {
     if (isLocoLoaded) {
       setIsHomeMounted(true);

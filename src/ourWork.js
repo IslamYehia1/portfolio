@@ -98,6 +98,7 @@ export default class OurWork extends React.Component {
                       className="mock"
                       src={DiginationDemoMock}
                       alt={"Digination Demo browser mock"}
+                      loading="eager"
                     />
                     <div className="videoWrapper">
                       <video autoPlay muted loop>
@@ -134,11 +135,13 @@ export default class OurWork extends React.Component {
                       alt={"Digination browser mock"}
                       className="mock"
                       src={DiginationMock}
+                      loading="eager"
                     />
                     <Image
                       alt="Digination site screenshot"
                       className="digination_1"
                       src={Digination}
+                      loading="eager"
                     />
                   </div>
                 </div>
@@ -170,6 +173,7 @@ export default class OurWork extends React.Component {
                       alt="Goodtripz site screenshot"
                       className="goodtripz"
                       src={Goodtripz}
+                      loading="eager"
                     />
                   </div>
                   {/* <img src=" alt=""/> */}
@@ -201,11 +205,13 @@ export default class OurWork extends React.Component {
                         alt="Internship site browser mock"
                         className="mock"
                         src={InternshipMock}
+                        loading="eager"
                       />
                       <Image
                         alt="Internship site screenshot"
                         className="diginationOG"
                         src={Internship}
+                        loading="eager"
                       />
                     </div>
                   </div>
